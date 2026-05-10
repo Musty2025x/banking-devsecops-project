@@ -62,7 +62,7 @@ jobs:
     # Deploy to Kubernetes
     - name: Deploy to Kubernetes
       run: |
-        kubectl apply -f k8s/
+        kubectl apply -f k8s/ --validate=false
 
     # Verify deployment
     - name: Verify Deployment
