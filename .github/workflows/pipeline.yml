@@ -57,6 +57,7 @@ jobs:
       run: |
         mkdir -p ~/.kube
         echo "${{ secrets.KUBE_CONFIG_DATA }}" > ~/.kube/config
+        chmod 600 ~/.kube/config
 
     # Deploy to Kubernetes
     - name: Deploy to Kubernetes
