@@ -12,6 +12,8 @@ spec:
       labels:
         app: bank-api
     spec:
+      imagePullSecrets:
+      - name: aws-registry-key
       containers:
       - name: bank-api
         image: 300272447770.dkr.ecr.us-east-1.amazonaws.com/bank-api:latest
